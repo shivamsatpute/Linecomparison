@@ -28,15 +28,21 @@ namespace PracticeProblem
             double LengthofLine1 = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);  
             double LengthofLine2 = Math.Sqrt((j2 - j1) ^ 2 + (k2 - k1) ^ 2);  
             Console.WriteLine("Length of (x, y) co-ordinates -  " + LengthofLine1);  
-            Console.WriteLine("Length of (j, k) co-ordinates -  " + LengthofLine2); 
+            Console.WriteLine("Length of (j, k) co-ordinates -  " + LengthofLine2);
 
-            if (LengthofLine1.Equals(LengthofLine2))            
+            double Result = LengthofLine1.CompareTo(LengthofLine2);  //compareTo method to compare 2 Lengths is LengthofLine1 and LengthofLine2
+            Console.WriteLine(Result);
+            if (Result==0)                       // one line is equal 
             {
-                Console.WriteLine("Two lines are equal ");
+                Console.WriteLine("Two Lines are equal ");
             }
-            else
+            else if(Result<0.0)    //less than the other line.
             {
-                Console.WriteLine("Two lines are Not equal");
+                Console.WriteLine("Line one is Smaller thean line Two");
+            }
+            else 
+            {
+                Console.WriteLine("Lines one is Greater then Line two");
             }
         }
     }
