@@ -30,13 +30,23 @@ namespace PracticeProblem
             Console.WriteLine("Length of (x, y) co-ordinates -  " + LengthofLine1);  
             Console.WriteLine("Length of (j, k) co-ordinates -  " + LengthofLine2);
 
-            double Result = LengthofLine1.CompareTo(LengthofLine2);  //compareTo method to compare 2 Lengths is LengthofLine1 and LengthofLine2
+
+            if (LengthofLine1.Equals(LengthofLine2))           
+            {
+                Console.WriteLine("Two lines are equal ");
+            }
+            else
+            {
+                Console.WriteLine("Two lines are Not equal");
+            }
+
+            double Result = LengthofLine1.CompareTo(LengthofLine2);  
             Console.WriteLine(Result);
-            if (Result==0)                       // one line is equal 
+            if (Result==0)                       
             {
                 Console.WriteLine("Two Lines are equal ");
             }
-            else if(Result<0.0)    //less than the other line.
+            else if(Result<0.0)   
             {
                 Console.WriteLine("Line one is Smaller thean line Two");
             }
